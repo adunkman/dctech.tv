@@ -1,0 +1,12 @@
+script: JEKYLL_ENV=production bundle exec jekyll build
+
+deploy:
+  provider: s3
+  access_key_id: AKIAJ4I5WF4JMUCBWGTA
+  secret_access_key:
+    secure: mwDuLarFi5LFBSbgiBBtdpC0xENRzuLjgtuVcbZ9+hBtf5fQNoTq0eAVI1NIjfBzOL/N1c7LSIgvolXhZbyg0qNsQk643AqknZrfNByuGu1PTu6Itcc3Z4A3Bj0oVgbBzkmrM4eBTd055o3ZFMcO87GS+3RZSoDULpSSfgYu2oXaU3q3OcmaZ9kJmqebssVMMaijX2HOi4jcjoeUF/toaA33UylWW3yehLz6OcDiKhnU4OYCdlovjC3o8y6EiriNkUrKsyAKMA9ABnVUo9SULQvFcps+wPbe8E8aFFzGC70Wc3oR+XGjVJhMG+e1lbT8id9hMEWB5v6vv6qqTc+Eek1RquppkLEXndE59ueGufcf/WTCZFH4bUOx5b4Ji4eng9sF4SyhmuQbhb9H+yuJ5aXts1LyOL6dd2uWlVjdlZFjmsPcvC5gSvPJ6K1TO//gVM2DTFBZ6JbtDW/z26tB2HjegW6obKpKd7GFbXTv7adTF9V/0YKhAmVVqQqztmjFRzPM3SVdPymGzTPDmHWFYnOknVQy9aiy9LHChJtnijvheSxLg4BTPStUDw1rB8Oq9Q9rZYFANv31nC9QJD9lhbAq3Y0/s51vJwMfoEGNrBXQTmO63uULXy1jwIhprXbkdlWMebAOrXyEMgxZvGg6rNK8mE7zh/Z1TmonRcASEiQ=
+  bucket: www.dctech.tv
+  local-dir: _site
+  acl: public_read
+  on:
+    repo: adunkman/dctech.tv
