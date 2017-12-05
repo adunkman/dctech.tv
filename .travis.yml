@@ -8,5 +8,6 @@ deploy:
   bucket: www.dctech.tv
   local-dir: _site
   acl: public_read
+  skip_cleanup: true
   on:
     repo: adunkman/dctech.tv
