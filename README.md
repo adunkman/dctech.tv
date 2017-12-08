@@ -10,7 +10,7 @@ This will launch the site running locally at [http://localhost:4000](http://loca
 
 # Deployment
 
-This application is deployed automatically on merges to master via Travis CI. The production build and deployment scripts are in [.travis.yml](.travis.yml).
+This application is deployed automatically on merges to master via [Travis CI](https://travis-ci.org/adunkman/dctech.tv). The production build and deployment scripts are in [.travis.yml](.travis.yml).
 
 # Production Environment
 
