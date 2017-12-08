@@ -1,3 +1,10 @@
 markdown: kramdown
 plugins:
   - jekyll-feed
+
+exclude:
+  - credentials
+  - Gemfile*
+  - lambda@edge.js
+  - README.md
+  - vendor
