@@ -27,5 +27,10 @@ exports.handler = (event, context, callback) => {
     value: "same-origin"
   }];
 
+  headers["public-key-pins"] = [{
+    key: "Public-Key-Pins",
+    value: 'pin-sha256="8661KWK58Pstdq/N5PKdnseT8AGMa+pKJUSan4kP4VQ="; pin-sha256="lGnqxto1pcHMrCWQ1LKzCzx+/6FUNtmN1wA6MYLBVHs="; max-age=86400'
+  }];
+
   callback(null, response);
 };
