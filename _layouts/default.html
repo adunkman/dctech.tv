@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% if page.title %}{{ page.title | append: " • " }}{% endif %}{% if layout.title %}{{ layout.title | append: " • " }}{% endif %}dctech.tv</title>
+
+    {% asset default.css %}
   </head>
   <body>
     {{ content | indent: 4 }}
