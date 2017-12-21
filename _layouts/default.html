@@ -6,6 +6,12 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@dctechtv">
+    <meta property="og:title" content="{% if page.title %}{{ page.title | append: " • " }}{% endif %}{% if layout.title %}{{ layout.title | append: " • " }}{% endif %}dctech.tv">{% if page.summary %}
+    <meta property="og:description" content="{{ page.summary }}">{% endif %}{% if page.summary_image %}
+    <meta property="og:image" content="{{ page.summary_image }}">{% endif %}
+
     <title>{% if page.title %}{{ page.title | append: " • " }}{% endif %}{% if layout.title %}{{ layout.title | append: " • " }}{% endif %}dctech.tv</title>
 
     {% asset default.css %}
