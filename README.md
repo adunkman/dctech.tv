@@ -1,3 +1,13 @@
+Hello! I’m [Andrew](https://github.com/adunkman), a programmer in the DC area. I somehow tricked everyone into believing that I’m a competent public speaker and programmer — it’s probably something to do with my skin color and gender, and that sucks.
+
+I once saw a conference talk by [Kronda](https://twitter.com/kronda) which changed the way I thought about the privilege that I have — I had previously felt quite guilty about my situation, but she implanted the idea of leveraging my privileges to help correct the terribleness.
+
+There’s a bit of a chicken-and-egg problem with conference speaking sometimes — not everyone wants to take a risk on someone new. I’ve found that after professional recordings of my previous talks were online, conferences were much more confortable with selecting my talks — and those conferences were more likely to produce professional recordings. So how do you get your first recording online?
+
+This is where I can help — I’m certainly not the most qualified, but I have a background in technical theater and the resources to give it a try. I could use your help, if you believe in what I am doing — open an issue and tell me your story.
+
+Don’t believe in my mission? That’s okay, I’ll keep doing me. As my [favorite non-profit bar](https://www.yelp.com/biz/the-saloon-washington) says, “Life is good, ya-ya.”
+
 # Development
 
 To run this application locally, you’ll need to install the dependencies and then launch the web server which automatically recompiles the site when changes are made.
