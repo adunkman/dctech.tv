@@ -9,14 +9,16 @@ exclude:
   - lambda@edge.js
   - README.md
   - vendor
+  - node_modules
 
 # Attempt to mirror production headers in development to catch any issues that
 # may arise when deploying. Try to keep these up-to-date with lambda@edge.js
 # as well as the CloudFront distribution’s Lambda@Edge function for greatest
-# happiness.
+# happiness — with one exception: script-src needs 'unsafe-inline' for pa11y to
+# work.
 webrick:
   headers:
-    Content-Security-Policy: "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'"
+    Content-Security-Policy: "default-src 'none'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; object-src 'none'"
     X-Content-Type-Options: "nosniff"
     X-Frame-Options: "DENY"
     X-XSS-Protection: "1; mode=block"
