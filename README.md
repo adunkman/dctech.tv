@@ -37,7 +37,7 @@ DNS for dctech.tv is provided by Amazon Route 53.
 
 # Support and Presence
 
-Support and promotion for dctech.tv is provided through [Twitter](https://twitter.com/dctechtv), [Facebook](https://www.facebook.com/dctechtv), [YouTube](https://www.youtube.com/channel/UCm0-yrQg5iunLdpRKINWDwQ), and via email at support@dctech.tv.
+Support and promotion for dctech.tv is provided through [Twitter](https://twitter.com/dctechtv), [Facebook](https://www.facebook.com/dctechtv), [Instagram](https://www.instagram.com/dctech.tv), [YouTube](https://www.youtube.com/channel/UCm0-yrQg5iunLdpRKINWDwQ), and via email at support@dctech.tv.
 
 Email for the dctech.tv domain is handled by https://mail.zoho.com/.
 
