@@ -2,7 +2,7 @@ Hello! I’m [Andrew](https://github.com/adunkman), a programmer in the DC area.
 
 I once saw a conference talk by [Kronda](https://twitter.com/kronda) which changed the way I thought about the privilege that I have — I had previously felt quite guilty about my situation, but she implanted the idea of leveraging my privileges to help correct the terribleness.
 
-There’s a bit of a chicken-and-egg problem with conference speaking sometimes — not everyone wants to take a risk on someone new. I’ve found that after professional recordings of my previous talks were online, conferences were much more confortable with selecting my talks — and those conferences were more likely to produce professional recordings. So how do you get your first recording online?
+There’s a bit of a chicken-and-egg problem with conference speaking sometimes — not everyone wants to take a risk on someone new. I’ve found that after professional recordings of my previous talks were online, conferences were much more comfortable with selecting my talks — and those conferences were more likely to produce professional recordings. So how do you get your first recording online?
 
 This is where I can help — I’m certainly not the most qualified, but I have a background in technical theater and the resources to give it a try. I could use your help, if you believe in what I am doing — open an issue and tell me your story.
 
