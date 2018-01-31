@@ -1,0 +1,71 @@
+html.home-page
+  height: 100%
+
+  body
+    margin: 0
+    height: 100%
+
+  .page-header
+    background: linear-gradient(lighten(#e81b39, 1%), darken(#e81b39, 1%))
+    box-shadow: 0 2px 2px rgba(#000, 0.1)
+    padding: 0 20px
+    line-height: 1
+
+    .page-logo svg
+      width: 148px
+      height: 50px
+      padding: 10px 0 6px
+
+  $footer-height: 130px
+
+  .page-footer-positioner
+    min-height: 100%
+    margin-bottom: -$footer-height
+    &:after
+      display: block
+      content: ""
+      height: $footer-height
+
+  .page-footer
+    background: #fafafa
+    box-shadow: inset 0 2px 2px rgba(#000, 0.03)
+    height: $footer-height
+    align-items: flex-start
+    align-content: center
+    flex-direction: column
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    font-size: 0.9em
+    .social-icon
+      margin: 7px 10px 0 10px
+      opacity: 0.4
+      transition: opacity 200ms ease-in-out
+      text-decoration: none
+      color: #000
+      .label
+        display: inline-block
+        border-bottom: 2px transparent solid
+        transition: border-bottom-color 200ms ease-in-out
+        line-height: 1
+      &:hover
+        opacity: 0.9
+        .label
+          border-bottom-color: rgba(#000, 0.5)
+      svg
+        vertical-align: middle
+        height: 20px
+        margin: 3px 5px 5px 10px
+
+  @media (min-width: 400px)
+    $footer-height: 100px
+
+    .page-footer-positioner
+      margin-bottom: -$footer-height
+      &:after
+        height: $footer-height
+
+    .page-footer
+      height: $footer-height
+      flex-direction: row
+      align-items: center

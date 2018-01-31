@@ -15,8 +15,59 @@
     <title>{% if page.title %}{{ page.title | append: " • " }}{% endif %}{% if layout.title %}{{ layout.title | append: " • " }}{% endif %}dctech.tv</title>
 
     {% asset default.css %}
+    <link rel="shortcut icon" href="{% asset favicon.png @path %}">
   </head>
   <body>
-    {{ content | indent: 4 }}
+    <div class="page-footer-positioner">
+      <header class="page-header">
+        <nav>
+          <a href="/" class="page-logo">
+            {% capture asset -%}
+              {% asset logo.svg @inline %}
+            {%- endcapture -%}
+            {{ asset | indent: 12 }}
+          </a>
+        </nav>
+      </header>
+      {{ content | indent: 6 }}
+    </div>
+    <footer class="page-footer">
+      <a class="social-icon" href="https://www.youtube.com/channel/UCm0-yrQg5iunLdpRKINWDwQ/" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/youtube.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">YouTube</span>
+      </a>
+      <a class="social-icon" href="https://twitter.com/dctechtv" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/twitter.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">Twitter</span>
+      </a>
+      <a class="social-icon" href="https://www.facebook.com/dctechtv" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/facebook.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">Facebook</span>
+      </a>
+      <a class="social-icon" href="https://www.instagram.com/dctech.tv/" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/instagram.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">Instagram</span>
+      </a>
+      <a class="social-icon" href="https://github.com/adunkman/dctech.tv" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/github.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">GitHub</span>
+      </a>
+      <p>
+    </footer>
   </body>
 </html>
