@@ -17,6 +17,7 @@ html.home-page
       padding: 10px 0 6px
 
   $footer-height: 130px
+  $footer-color: #fafafa
 
   .page-footer-positioner
     min-height: 100%
@@ -27,7 +28,7 @@ html.home-page
       height: $footer-height
 
   .page-footer
-    background: #fafafa
+    background: $footer-color
     box-shadow: inset 0 2px 2px rgba(#000, 0.03)
     height: $footer-height
     align-items: flex-start
@@ -48,6 +49,7 @@ html.home-page
         border-bottom: 2px transparent solid
         transition: border-bottom-color 200ms ease-in-out
         line-height: 1
+        text-shadow: 1px 1px 0 $footer-color, -1px -1px 0 $footer-color, -1px 1px 0 $footer-color, 1px -1px 0 $footer-color
       &:hover
         opacity: 0.9
         .label
