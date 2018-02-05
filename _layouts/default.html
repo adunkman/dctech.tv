@@ -26,7 +26,7 @@
               {% capture asset -%}
                 {% asset logo.svg @inline %}
               {%- endcapture -%}
-              {{ asset | indent: 12 }}
+              {{ asset | indent: 14 }}
             </a>
           </span>
           <span class="menu-item menu-item-primary">
@@ -34,7 +34,7 @@
               {% capture asset -%}
                 {% asset icons/youtube.svg @inline %}
               {%- endcapture -%}
-              {{ asset | indent: 8 }}
+              {{ asset | indent: 14 }}
               <span class="label">Watch on YouTube</span>
             </a>
           </span>
@@ -78,7 +78,6 @@
         {{ asset | indent: 8 }}
         <span class="label">GitHub</span>
       </a>
-      <p>
     </footer>
   </body>
 </html>
