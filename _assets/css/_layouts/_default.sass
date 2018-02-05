@@ -13,53 +13,77 @@ html.default-layout
     margin: 0
 
   .page-header
-    background: linear-gradient(lighten(#e81b39, 1%), darken(#e81b39, 1%))
-    box-shadow: 0 2px 2px rgba(#000, 0.1)
-    color: #fff
-    line-height: 1
-    padding: 0 20px
-
     nav
       display: flex
+      flex-direction: column
+      background-color: #ddd
+      box-shadow: 0 2px 2px rgba(#000, 0.1)
       .page-logo,
       .menu-item
         display: block
-        height: 50px
       .page-logo
-        flex-grow: 1
+        background: linear-gradient(lighten(#e81b39, 1%), darken(#e81b39, 1%))
+        box-shadow: 0 2px 2px rgba(#000, 0.1)
+        color: #fff
+        height: 50px
+        padding: 0 20px
         svg
           height: 100%
-          margin-top: -1px
           width: 148px
       .menu-item
-        align-self: flex-end
-        line-height: 50px
-        & + .menu-item
-          margin-left: 10px
         a
           border-radius: 5px
-          color: #fff
-          display: inline-block
-          line-height: 1
-          padding: 8px 10px
+          color: #000
+          display: block
           text-decoration: none
-          text-shadow: 1px 1px 1px rgba(#000, 0.1), -1px -1px 1px rgba(#000, 0.1), 1px 0 1px rgba(#000, 0.1), 0 1px 1px rgba(#000, 0.1)
-          transition: background-color 100ms ease-in-out
-          &:hover
-            background-color: rgba(#fff, 0.2)
+          line-height: 50px
+          padding: 0 20px
+          .label
+            line-height: 50px
         .social-icon
-          padding-left: 40px
+          padding-left: 50px
           position: relative
           svg
             height: 20px
-            left: 10px
+            left: 20px
             position: absolute
-            top: 6px
+            top: 50%
+            transform: translateY(-50%)
             path
-              fill: #fff
-      .menu-item-primary
-        order: 1
+              fill: #000
 
+    @media (min-width: 600px)
+      nav
+        flex-direction: row
+        padding: 0 20px
+        background: linear-gradient(lighten(#e81b39, 1%), darken(#e81b39, 1%))
+        .page-logo
+          flex-grow: 1
+          box-shadow: none
+          padding: 0
+        .menu-item
+          line-height: 50px
+          & + .menu-item
+            margin-left: 10px
+          a
+            color: #fff
+            display: inline-block
+            line-height: 1
+            padding: 8px 10px
+            text-shadow: 1px 1px 1px rgba(#000, 0.1), -1px -1px 1px rgba(#000, 0.1), 1px 0 1px rgba(#000, 0.1), 0 1px 1px rgba(#000, 0.1)
+            transition: background-color 100ms ease-in-out
+            &:hover
+              background-color: rgba(#fff, 0.2)
+            .label
+              line-height: 1
+          .social-icon
+            padding-left: 40px
+            svg
+              left: 10px
+              path
+                fill: #fff
+        .menu-item-primary
+          order: 1
 
   $footer-height: 130px
   $footer-color: #fafafa
