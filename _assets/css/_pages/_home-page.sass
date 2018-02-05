@@ -1,73 +1,69 @@
 html.home-page
-  height: 100%
+  .hero
+    height: 300px
+    text-shadow: 1px 1px 1px rgba(#000, 0.5), -1px -1px 1px rgba(#000, 0.1), 1px 0 1px rgba(#000, 0.1), 0 1px 1px rgba(#000, 0.1), 0 0 10px rgba(#000, 0.6)
 
-  body
-    margin: 0
-    height: 100%
+  .mailchimp-off-screen
+    position: absolute
+    left: -5000px
 
-  .page-header
-    background: linear-gradient(lighten(#e81b39, 1%), darken(#e81b39, 1%))
-    box-shadow: 0 2px 2px rgba(#000, 0.1)
+  .lede
+    font-size: 1.5em
+    background: #333
+    color: #fff
+    padding: 40px 20px
+
+    p
+      max-width: 900px
+      margin: 0 auto
+
+  .page-content
     padding: 0 20px
-    line-height: 1
+    margin: 0 auto
+    max-width: 940px
 
-    .page-logo svg
-      width: 148px
-      height: 50px
-      padding: 10px 0 6px
-
-  $footer-height: 130px
-  $footer-color: #fafafa
-
-  .page-footer-positioner
-    min-height: 100%
-    margin-bottom: -$footer-height
-    &:after
+    label
       display: block
-      content: ""
-      height: $footer-height
+      margin: 5px 0
 
-  .page-footer
-    background: $footer-color
-    box-shadow: inset 0 2px 2px rgba(#000, 0.03)
-    height: $footer-height
-    align-items: flex-start
-    align-content: center
-    flex-direction: column
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
-    font-size: 0.9em
-    .social-icon
-      margin: 7px 10px 0 10px
-      opacity: 0.4
-      transition: opacity 200ms ease-in-out
-      text-decoration: none
-      color: #000
-      .label
-        display: inline-block
-        border-bottom: 2px transparent solid
-        transition: border-bottom-color 200ms ease-in-out
-        line-height: 1
-        text-shadow: 1px 1px 0 $footer-color, -1px -1px 0 $footer-color, -1px 1px 0 $footer-color, 1px -1px 0 $footer-color
+    input[type='email']
+      appearance: none
+      background: #fff
+      border-radius: 3px
+      border: 1px solid rgba(#000, 0.4)
+      color: #333
+      display: block
+      font-size: 1em
+      height: 40px
+      margin: 1em 0
+      max-width: 300px
+      padding: 0 8px
+      width: 100%
+
+    input[type='checkbox']
+      font-size: 1em
+      margin: 0.3em 5px 0 0
+      vertical-align: top
+      border-radius: 2px
+
+    button
+      appearance: none
+      background: linear-gradient(#fff, #eee)
+      border-radius: 3px
+      border: 0 none
+      box-shadow: inset 0 0 0 1px rgba(#000, 0.2)
+      color: #333
+      cursor: pointer
+      display: block
+      font-size: 1em
+      height: 40px
+      margin: 1em 0
+      padding: 0 15px
       &:hover
-        opacity: 0.9
-        .label
-          border-bottom-color: rgba(#000, 0.5)
-      svg
-        vertical-align: middle
-        height: 20px
-        margin: 3px 5px 5px 10px
+        background: linear-gradient(darken(#fff, 1%), darken(#eee, 1%))
+      &:active
+        background: darken(#eee, 1%)
+        box-shadow: inset 0 0 0 1px rgba(#000, 0.15), inset 0 1px 3px rgba(#000, 0.15)
+      &::-moz-focus-inner
+        border: 0
 
-  @media (min-width: 400px)
-    $footer-height: 100px
-
-    .page-footer-positioner
-      margin-bottom: -$footer-height
-      &:after
-        height: $footer-height
-
-    .page-footer
-      height: $footer-height
-      flex-direction: row
-      align-items: center

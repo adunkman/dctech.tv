@@ -1,0 +1,118 @@
+html.default-layout
+  background-color: #fff
+  color: #333
+  font-family: sans-serif
+  height: 100%
+  min-height: 100%
+
+  *
+    box-sizing: border-box
+
+  body
+    height: 100%
+    margin: 0
+
+  .page-header
+    background: linear-gradient(lighten(#e81b39, 1%), darken(#e81b39, 1%))
+    box-shadow: 0 2px 2px rgba(#000, 0.1)
+    color: #fff
+    line-height: 1
+    padding: 0 20px
+
+    nav
+      display: flex
+      .page-logo,
+      .menu-item
+        display: block
+        height: 50px
+      .page-logo
+        flex-grow: 1
+        svg
+          height: 100%
+          margin-top: -1px
+          width: 148px
+      .menu-item
+        align-self: flex-end
+        line-height: 50px
+        & + .menu-item
+          margin-left: 10px
+        a
+          border-radius: 5px
+          color: #fff
+          display: inline-block
+          line-height: 1
+          padding: 8px 10px
+          text-decoration: none
+          text-shadow: 1px 1px 1px rgba(#000, 0.1), -1px -1px 1px rgba(#000, 0.1), 1px 0 1px rgba(#000, 0.1), 0 1px 1px rgba(#000, 0.1)
+          transition: background-color 100ms ease-in-out
+          &:hover
+            background-color: rgba(#fff, 0.2)
+        .social-icon
+          padding-left: 40px
+          position: relative
+          svg
+            height: 20px
+            left: 10px
+            position: absolute
+            top: 6px
+            path
+              fill: #fff
+      .menu-item-primary
+        order: 1
+
+
+  $footer-height: 130px
+  $footer-color: #fafafa
+
+  .page-footer-positioner
+    margin-bottom: -$footer-height
+    min-height: 100%
+    &:after
+      content: ""
+      display: block
+      height: $footer-height
+
+  .page-footer
+    align-content: flex-start
+    align-items: flex-start
+    background: $footer-color
+    box-shadow: inset 0 2px 2px rgba(#000, 0.03)
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    height: $footer-height
+    justify-content: center
+    .social-icon
+      color: #000
+      margin: 7px 10px 0 10px
+      opacity: 0.4
+      text-decoration: none
+      transition: opacity 100ms ease-in-out
+      .label
+        border-bottom: 2px transparent solid
+        display: inline-block
+        line-height: 1
+        text-shadow: 1px 1px 0 $footer-color, -1px -1px 0 $footer-color, -1px 1px 0 $footer-color, 1px -1px 0 $footer-color
+        transition: border-bottom-color 100ms ease-in-out
+      &:hover
+        opacity: 0.9
+        .label
+          border-bottom-color: rgba(#000, 0.5)
+      svg
+        height: 20px
+        margin: 3px 5px 5px 10px
+        vertical-align: middle
+
+  @media (min-width: 400px)
+    $footer-height: 100px
+
+    .page-footer-positioner
+      margin-bottom: -$footer-height
+      &:after
+        height: $footer-height
+
+    .page-footer
+      align-content: center
+      align-items: center
+      flex-direction: row
+      height: $footer-height
