@@ -1,0 +1,84 @@
+html.base-layout
+  background-color: #fff
+  color: #333
+  font-family: sans-serif
+  height: 100%
+  min-height: 100%
+
+  *
+    box-sizing: border-box
+
+  body
+    height: 100%
+    margin: 0
+
+  $footer-height: 130px
+  $footer-color: #fafafa
+
+  .page-grid
+    display: grid
+    grid-column-gap: 20px
+    grid-row-gap: 40px
+    grid-template-columns: [edge-start] auto [content-start] repeat(12, minmax(20px, 60px)) [content-end] auto [edge-end]
+    grid-template-rows: [edge-start] auto [content-start] 1fr [content-end] auto [edge-end]
+
+    &.rows-2
+      grid-template-rows: [edge-start] auto [content-start] 1fr [content-end] auto [edge-end]
+
+    .row-1
+      grid-row: 2
+    .row-2
+      grid-row: 3
+
+  .page-container
+    margin-bottom: -$footer-height
+    min-height: 100%
+    &:after
+      content: ""
+      display: block
+      height: $footer-height
+
+  .page-footer
+    align-content: flex-start
+    align-items: flex-start
+    background: $footer-color
+    box-shadow: inset 0 2px 2px rgba(#000, 0.03)
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    height: $footer-height
+    justify-content: center
+    .social-icon
+      color: #000
+      margin: 7px 10px 0 10px
+      opacity: 0.4
+      text-decoration: none
+      transition: opacity 100ms ease-in-out
+      .label
+        border-bottom: 2px transparent solid
+        display: inline-block
+        line-height: 1
+        text-shadow: 1px 1px 0 $footer-color, -1px -1px 0 $footer-color, -1px 1px 0 $footer-color, 1px -1px 0 $footer-color
+        transition: border-bottom-color 100ms ease-in-out
+      &:hover
+        opacity: 0.9
+        .label
+          border-bottom-color: rgba(#000, 0.5)
+      svg
+        height: 20px
+        margin: 3px 5px 5px 10px
+        vertical-align: middle
+
+  @media (min-width: 400px)
+    $footer-height: 100px
+
+    .page-footer-positioner
+      margin-bottom: -$footer-height
+      &:after
+        height: $footer-height
+
+    .page-footer
+      align-content: center
+      align-items: center
+      flex-direction: row
+      height: $footer-height

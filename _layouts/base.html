@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="base-layout{% if page.append_class_to_html or layout.append_class_to_html %} {{ layout.append_class_to_html | append: ' ' | append: page.append_class_to_html | strip }}{% endif %}">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@dctechtv">
+    <meta property="og:title" content="{% if page.title %}{{ page.title | append: " • " }}{% endif %}{% if layout.title %}{{ layout.title | append: " • " }}{% endif %}dctech.tv">{% if page.summary %}
+    <meta property="og:description" content="{{ page.summary }}">{% endif %}{% if page.summary_image %}
+    <meta property="og:image" content="{{ page.summary_image }}">{% endif %}
+
+    <title>{% if page.title %}{{ page.title | append: " • " }}{% endif %}{% if layout.title %}{{ layout.title | append: " • " }}{% endif %}dctech.tv</title>
+
+    {% asset all.css %}
+    <link rel="shortcut icon" href="{% asset favicon.png @path %}">
+  </head>
+  <body>
+    <div class="page-content">
+      {{ content | indent: 6 }}
+    </div>
+    <footer class="page-footer">
+      <a href="https://www.youtube.com/channel/UCm0-yrQg5iunLdpRKINWDwQ/" class="social-icon" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/youtube.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">YouTube</span>
+      </a>
+      <a href="https://twitter.com/dctechtv" class="social-icon" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/twitter.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">Twitter</span>
+      </a>
+      <a href="https://www.facebook.com/dctechtv" class="social-icon" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/facebook.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">Facebook</span>
+      </a>
+      <a href="https://www.instagram.com/dctech.tv/" class="social-icon" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/instagram.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">Instagram</span>
+      </a>
+      <a href="https://github.com/adunkman/dctech.tv" class="social-icon" rel="noopener" target="_blank">
+        {% capture asset -%}
+          {% asset icons/github.svg @inline %}
+        {%- endcapture -%}
+        {{ asset | indent: 8 }}
+        <span class="label">GitHub</span>
+      </a>
+    </footer>
+  </body>
+</html>
