@@ -21,18 +21,23 @@ html.home-page
       height: 100%
 
     .logo
-      grid-column: content-start / span 3
-      grid-row: content-start / content-end
-      align-self: center
+      grid-column: content-start / content-end
+      align-self: end
 
       svg
+        display: block
+        margin: 0 auto
+        max-width: 200px
         filter: drop-shadow(1px 1px 0 rgba(#000, 0.1)) drop-shadow(1px -1px 0 rgba(#000, 0.1)) drop-shadow(-1px 1px 0 rgba(#000, 0.1)) drop-shadow(-1px -1px 0 rgba(#000, 0.1)) drop-shadow(1px 1px 2px rgba(#000, 0.3))
 
+        path
+          fill: #fff
+
     .thing
-      grid-column: 5 / content-end
-      grid-row: content-start / content-end
-      align-self: center
+      grid-column: content-start / content-end
+      align-self: start
       color: #fff
+      text-align: center
 
       .tagline
         font-size: 2em
@@ -65,19 +70,16 @@ html.home-page
             margin-top: -1px
             transform: translateY(-50%)
 
-  .hanging-section-label-container
-    h1
-      grid-column: content-start / span 3
-      margin-top: 0
-
-    .content
-      grid-column: 5 / content-end
-      line-height: 1.4
-
-      p:first-child
-        margin-top: 0
-      p:last-child
-        margin-bottom: 0
+    @media (min-width: 980px)
+      .logo
+        grid-column: content-start / span 3
+        align-self: center
+        svg
+          max-width: none
+      .thing
+        grid-column: 5 / content-end
+        align-self: center
+        text-align: left
 
   .mailchimp-off-screen
     position: absolute

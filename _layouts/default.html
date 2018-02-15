@@ -1,5 +1,17 @@
 ---
 layout: base
+append_class_to_html: default-layout
 ---
 
-{{ content }}
+<header class="page-grid">
+  <a class="logo" href="/" aria-label="dctech.tv logo">
+    {% capture asset -%}
+      {% asset logo.svg @inline %}
+    {%- endcapture -%}
+    {{ asset | indent: 4 }}
+  </a>
+</header>
+
+<main class="page-grid hanging-section-label-container">
+  {{ content | indent: 2 }}
+</main>

@@ -16,21 +16,46 @@ html.base-layout
   $footer-color: #fafafa
 
   .page-grid
+    padding: 40px 0
     display: grid
     grid-column-gap: 20px
     grid-row-gap: 40px
-    grid-template-columns: [edge-start] auto [content-start] repeat(12, minmax(20px, 60px)) [content-end] auto [edge-end]
-    grid-template-rows: [edge-start] auto [content-start] 1fr [content-end] auto [edge-end]
+    grid-template-columns: [edge-start] auto [content-start] 1fr [content-end] auto [edge-end]
 
-    &.rows-2
-      grid-template-rows: [edge-start] auto [content-start] 1fr [content-end] auto [edge-end]
+    @media (min-width: 980px)
+      grid-template-columns: [edge-start] auto [content-start] repeat(12, 60px) [content-end] auto [edge-end]
 
-    .row-1
-      grid-row: 2
-    .row-2
-      grid-row: 3
+  .hanging-section-label-container
+    h1
+      border-top: 5px #000 solid
 
-  .page-container
+    h1, h2
+      grid-column: content-start / content-end
+      margin: 0
+
+    .content
+      grid-column: content-start / content-end
+      line-height: 1.4
+
+      p:first-child
+        margin-top: 0
+      p:last-child
+        margin-bottom: 20px
+
+    @media (min-width: 980px)
+      h1
+        margin-top: 4px
+
+      h1, h2
+        grid-column: content-start / span 3
+
+      .content
+        grid-column: 5 / content-end
+
+        p:last-child
+          margin-bottom: 0
+
+  .page-content
     margin-bottom: -$footer-height
     min-height: 100%
     &:after
